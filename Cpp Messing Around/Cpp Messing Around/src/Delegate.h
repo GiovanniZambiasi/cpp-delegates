@@ -26,9 +26,9 @@ public:
         (_target->*_method)();
     }
 
-    bool IsMethodEquals(SpecializedDelegate method)
+    bool Equals(TObject* object, SpecializedDelegate method)
     {
-        return _method == method;
+        return object == _target && _method == method;
     }
 
 private:
@@ -61,12 +61,10 @@ public:
         {
             DelegateMember<T>* member = dynamic_cast<DelegateMember<T>*>(_members[i]);
 
-            if(member == nullptr)
-                continue;
-            else
+            if(member != nullptr &&member->Equals(object, method))
             {
-                if(member->IsMethodEquals(method))
-                    _members.erase(_members.begin() + i);
+                _members.erase(_members.begin() + i);
+                delete member;
             }
         }
     }
