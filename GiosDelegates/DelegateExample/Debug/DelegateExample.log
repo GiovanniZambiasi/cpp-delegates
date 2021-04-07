@@ -1,7 +1,7 @@
 ﻿  main.cpp
-D:\Documents\_Projects_FAT\cpp-delegates\GiosDelegates\DelegateExample\src\main.cpp(30,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+D:\Documents\_Projects_FAT\cpp-delegates\GiosDelegates\DelegateExample\src\main.cpp(28,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
 D:\Documents\_Projects_FAT\cpp-delegates\GiosDelegates\GiosDelegates\Delegate.h(63,2): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\_Projects_FAT\cpp-delegates\GiosDelegates\GiosDelegates\Delegate.h(62): message : while compiling class template member function 'void Delegate<float,int,bool>::Invoke(float,int,bool)'
-D:\Documents\_Projects_FAT\cpp-delegates\GiosDelegates\DelegateExample\src\main.cpp(45): message : see reference to function template instantiation 'void Delegate<float,int,bool>::Invoke(float,int,bool)' being compiled
-D:\Documents\_Projects_FAT\cpp-delegates\GiosDelegates\DelegateExample\src\main.cpp(41): message : see reference to class template instantiation 'Delegate<float,int,bool>' being compiled
+D:\Documents\_Projects_FAT\cpp-delegates\GiosDelegates\GiosDelegates\Delegate.h(62): message : while compiling class template member function 'void Delegate<>::Invoke(void)'
+D:\Documents\_Projects_FAT\cpp-delegates\GiosDelegates\DelegateExample\src\main.cpp(39): message : see reference to function template instantiation 'void Delegate<>::Invoke(void)' being compiled
+D:\Documents\_Projects_FAT\cpp-delegates\GiosDelegates\DelegateExample\src\main.cpp(29): message : see reference to class template instantiation 'Delegate<>' being compiled
   DelegateExample.vcxproj -> D:\Documents\_Projects_FAT\cpp-delegates\GiosDelegates\Debug\DelegateExample.exe
