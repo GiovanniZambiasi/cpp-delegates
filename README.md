@@ -64,7 +64,7 @@ void main()
 
     del.Add(bar, &Bar::DoBar);
 
-    del.Invoke();
+    del.Invoke(); // "Foo!" and "Bar!" are logged
 }
 ```
 <br></br>
