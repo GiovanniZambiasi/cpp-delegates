@@ -2,6 +2,11 @@
 A naive single-header implementation of delegates to member functions in c++. Insipred by the Unreal Engine 4 delegate system. For anyone looking to do the same, I recomment these two articles:
 - [Implement a simple event and delegate system in C++ by Giang Tong](https://tongtunggiang.com/2017/cpp-event-delegate/)
 - [C++ Delegates by Simon Coenen](https://tongtunggiang.com/2017/cpp-event-delegate/)
+
+My goals were to:
+- Make it as simple, and with as clean a syntax as possible
+- Be able to bind member functions to it, regardless of their type
+- Support any number of parameters
 <br></br>
 ## Usage:
   To use, add the GiosDelegates.dll into your project's include directories, and add the include ``"Delegate.h"``. Only member functions can be added to a ``Delegate`` (no global functions are supported... yet?). You can bind any number of functions of any number of types to the same ``Delegate``, as long as their signatures are the same.
