@@ -112,6 +112,6 @@ void main()
     Foo* foo = new Foo();
     specializedDelegate.Add(foo, &Foo::DoFoo);
     
-    specializedDelegate.Invoke(10.0f, 1, false); // "Foo! 10.0000, 1, 1" is logged
+    specializedDelegate.Invoke(10.0f, 1, false); // "Foo! 10.0000, 1, 0" is logged
 }
 ```
