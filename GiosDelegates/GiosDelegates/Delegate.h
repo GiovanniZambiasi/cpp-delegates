@@ -21,7 +21,8 @@ public:
 
     void Invoke(TArgs ... params) override
     {
-        (_target->*_method)(params...);
+        if(_target != nullptr)
+            (_target->*_method)(params...);
     }
 
     bool Equals(TObject* object, SpecializedDelegateOneParam method)
