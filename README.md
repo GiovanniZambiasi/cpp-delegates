@@ -9,7 +9,7 @@ My goals were to:
 - Support any number of parameters
 <br></br>
 ## Usage:
-  To use, add the GiosDelegates.dll into your project's include directories, and add the include ``"Delegate.h"``. Only member functions can be added to a ``Delegate`` (no global functions are supported... yet?). You can bind any number of functions of any number of types to the same ``Delegate``, as long as their signatures are the same.
+  To use, download the latest binaries from [Releases](https://github.com/GiovanniZambiasi/cpp-delegates/releases), and add them to your project. You only need to  ``#include "Delegate.h"``. Only member functions can be added to a ``Delegate`` (no global functions are supported... yet?). You can bind any number of functions of any number of types to the same ``Delegate``, as long as their signatures are the same.
 <br></br>
 ### Parameterless delegates:
 ```cpp
