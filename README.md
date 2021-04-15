@@ -1,4 +1,4 @@
-# Gios C++ Delegates
+# Gio's C++ Delegates
 A naive single-header implementation of delegates to member functions in c++. Insipred by the Unreal Engine 4 delegate system. For anyone looking to do the same, I recomment these two articles:
 - [Implement a simple event and delegate system in C++ by Giang Tong](https://tongtunggiang.com/2017/cpp-event-delegate/)
 - [C++ Delegates by Simon Coenen](https://tongtunggiang.com/2017/cpp-event-delegate/)
