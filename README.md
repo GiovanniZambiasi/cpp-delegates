@@ -22,6 +22,5 @@ TBD...<br>
 You can find all examples here [/GioDelegates/GioDelegateExamples.cpp](./GioDelegates/GioDelegateExamples.cpp)
 
 # To-do
-- [ ] Bind unique
-- [ ] Unbind/Clear
+- [ ] Unbind specific delegate (via handle?)
 - [ ] Remove by object

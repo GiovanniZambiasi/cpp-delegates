@@ -55,7 +55,7 @@ namespace Gio
     {
         typedef Listener<TArgs...> SpecializedListener;
     
-        std::vector<std::unique_ptr<SpecializedListener>> Listeners{};
+        std::vector<std::shared_ptr<SpecializedListener>> Listeners{};
     
     public:
         void Invoke(TArgs... Args)
@@ -74,15 +74,20 @@ namespace Gio
         template<typename TFunc>
         void Bind(TFunc Method)
         {
-            auto* ListenerInstance = new StandardListener<TFunc, TArgs...>{Method};
-            Listeners.push_back(std::unique_ptr<SpecializedListener>(ListenerInstance));
+            auto ListenerInstance = std::make_shared<StandardListener<TFunc, TArgs...>>(Method);
+            Listeners.push_back(ListenerInstance);
         }
 
         template<typename TMemberType, typename TMethod>
         void BindMember(TMemberType& Member, TMethod Method)
         {
-            auto* Listener = new MemberMethodListener<TMemberType, TMethod, TArgs...>{Member, Method};
-            Listeners.push_back(std::unique_ptr<SpecializedListener>(Listener));
+            auto Listener = std::make_shared<MemberMethodListener<TMemberType, TMethod, TArgs...>>(Member, Method);
+            Listeners.push_back(Listener);
+        }
+        
+        void Clear()
+        {
+            Listeners.clear();
         }
     };
 
